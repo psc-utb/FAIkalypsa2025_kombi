@@ -19,7 +19,7 @@ public class GhoulEyes : MonoBehaviour
             Ray ray = new Ray(transform.position, direction);
             Physics.Raycast(ray, out RaycastHit hitInfo, 3, ~LayerMask.GetMask("Enemy"));
             Debug.DrawRay(ray.origin, ray.direction * 3, Color.chocolate);
-            if (hitInfo.collider != null && hitInfo.collider.gameObject == player)
+            if (hitInfo.collider != null && hitInfo.collider.gameObject.layer == player.layer)
             {
                 PlayerIsVisible?.Invoke(true);
                 return;
@@ -30,7 +30,7 @@ public class GhoulEyes : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject.layer == player.layer)
         {
             collision = true;
         }
@@ -38,7 +38,7 @@ public class GhoulEyes : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == player)
+        if (other.gameObject.layer == player.layer)
         {
             collision = false;
         }

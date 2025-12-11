@@ -1800,7 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0335efb6984a9784c91c5604e18c1289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhoulEyes
-  player: {fileID: 884001451}
+  player: {fileID: 1880071172}
   PlayerIsVisible:
     m_PersistentCalls:
       m_Calls:
@@ -2715,6 +2715,11 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!1 &1880071172 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
+  m_PrefabInstance: {fileID: 485276230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1988713905
 PrefabInstance:
   m_ObjectHideFlags: 0
